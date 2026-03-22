@@ -40,6 +40,7 @@ body {
   overflow: hidden;
 }
 
+/* Glow (corrigido) */
 .hero::after {
   content: '';
   position: absolute;
@@ -49,6 +50,14 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  pointer-events: none; /* 🔥 CORREÇÃO */
+  z-index: 0;
+}
+
+/* Garante que conteúdo fique clicável */
+.hero * {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-initials {
@@ -71,7 +80,7 @@ body {
   color: var(--gold);
 }
 
-/* CTA */
+/* BOTÃO */
 .cta-btn {
   margin-top: 30px;
   padding: 14px 28px;
@@ -124,7 +133,7 @@ body {
   background: var(--dark3);
 }
 
-/* ABOUT BOX */
+/* BOX */
 .about-box {
   background: var(--dark2);
   padding: 25px;
@@ -151,7 +160,7 @@ footer {
   <h1 class="hero-name">Felipe Vinicius Lima dos Santos</h1>
   <p class="hero-title">Precisão em Conferência de Cargas</p>
 
-  <a href="https://wa.me/5541984606801?text=Olá%20Felipe,%20vim%20pelo%20seu%20site" 
+  <a href="https://api.whatsapp.com/send?phone=5541984606801&text=Olá%20Felipe,%20vim%20pelo%20seu%20site"
      class="cta-btn" target="_blank">
     Falar no WhatsApp
   </a>
@@ -166,12 +175,16 @@ footer {
     <span>→</span>
   </a>
 
-  <a class="contact-card" href="https://wa.me/5541984606801?text=Olá%20Felipe,%20vim%20pelo%20seu%20site" target="_blank">
+  <a class="contact-card"
+     href="https://api.whatsapp.com/send?phone=5541984606801&text=Olá%20Felipe"
+     target="_blank">
     <span>WhatsApp</span>
     <span>→</span>
   </a>
 
-  <a class="contact-card" href="https://www.linkedin.com/in/felipe-vinicius-lima-dos-santos-a70a88207" target="_blank">
+  <a class="contact-card"
+     href="https://www.linkedin.com/in/felipe-vinicius-lima-dos-santos-a70a88207"
+     target="_blank">
     <span>LinkedIn</span>
     <span>→</span>
   </a>
