@@ -40,7 +40,6 @@ body {
   overflow: hidden;
 }
 
-/* Glow */
 .hero::after {
   content: '';
   position: absolute;
@@ -51,10 +50,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none;
-  z-index: 0;
 }
 
-/* garante clique */
 .hero * {
   position: relative;
   z-index: 2;
@@ -141,11 +138,10 @@ body {
   text-decoration: none;
   color: inherit;
   transition: 0.3s;
-  backdrop-filter: blur(6px);
 }
 
 .contact-card:hover {
-  transform: translateX(6px) scale(1.01);
+  transform: translateX(6px);
   background: var(--dark3);
 }
 
@@ -155,7 +151,8 @@ body {
   padding: 25px;
   border-radius: 10px;
   border: 1px solid rgba(198,168,109,0.1);
-  line-height: 1.7;
+  line-height: 1.8;
+  font-size: 14px;
 }
 
 /* FOOTER */
@@ -166,26 +163,17 @@ footer {
   color: var(--muted);
 }
 
-/* ===== DESKTOP ===== */
+/* DESKTOP */
 @media (min-width: 1024px) {
 
-  .hero {
-    padding: 120px 20px;
-  }
-
-  .hero-initials {
-    font-size: 140px;
-  }
+  .hero-initials { font-size: 140px; }
 
   .hero-photo {
     width: 160px;
     height: 160px;
-    margin: 30px 0;
   }
 
-  .hero-name {
-    font-size: 48px;
-  }
+  .hero-name { font-size: 48px; }
 
   .hero-title {
     font-size: 14px;
@@ -202,15 +190,7 @@ footer {
     padding: 80px 20px;
   }
 
-  .about-box {
-    font-size: 16px;
-  }
-
-  .contact-card {
-    padding: 22px;
-    font-size: 15px;
-  }
-
+  .about-box { font-size: 16px; }
 }
 </style>
 </head>
@@ -224,7 +204,10 @@ footer {
   <img src="foto.jpg" alt="Felipe Vinicius" class="hero-photo">
 
   <h1 class="hero-name">Felipe Vinicius Lima dos Santos</h1>
-  <p class="hero-title">Precisão em Conferência de Cargas</p>
+
+  <p class="hero-title">
+    Conferência • Pesagem • Faturamento • Atendimento
+  </p>
 
   <a href="https://api.whatsapp.com/send?phone=5541984606801&text=Olá%20Felipe,%20vim%20pelo%20seu%20site"
      class="cta-btn" target="_blank">
@@ -256,25 +239,43 @@ footer {
   </a>
 </div>
 
+<!-- ÁREAS DE ATUAÇÃO -->
+<div class="section">
+  <p class="section-label">Áreas de Atuação</p>
+
+  <div class="about-box">
+    • Conferência de cargas<br>
+    • Pesagem rodoviária<br>
+    • Pesagem ferroviária<br>
+    • Faturamento<br>
+    • Atendimento a motoristas<br>
+    • Controle operacional logístico
+  </div>
+</div>
+
 <!-- DIFERENCIAIS -->
 <div class="section">
   <p class="section-label">Diferenciais</p>
 
   <div class="about-box">
-    ✔ Experiência em operações portuárias<br>
-    ✔ Alto nível de precisão e organização<br>
-    ✔ Comprometimento com prazos<br>
-    ✔ Facilidade em trabalho em equipe
+    • Alto nível de precisão operacional<br>
+    • Organização e controle de processos<br>
+    • Comprometimento com prazos<br>
+    • Facilidade em trabalho em equipe<br>
+    • Foco em segurança e qualidade
   </div>
 </div>
 
 <!-- SOBRE -->
 <div class="section">
-  <p class="section-label">Sobre</p>
+  <p class="section-label">Perfil Profissional</p>
 
   <div class="about-box">
-    Profissional dedicado à área de logística e conferência de cargas,
-    com foco em precisão, organização e eficiência operacional.
+    Profissional com experiência em operações logísticas, atuando na conferência de cargas,
+    pesagens rodoviárias e ferroviárias, faturamento e atendimento a motoristas.
+
+    Possui perfil organizado, atento aos detalhes e comprometido com a eficiência dos processos,
+    contribuindo diretamente para a qualidade e segurança das operações logísticas.
   </div>
 </div>
 
